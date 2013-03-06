@@ -16,4 +16,9 @@ describe "LayoutLinks" do
     response.should have_selector('title', :content => "Stream")
   end
 
+    it "Inscription must be '/signup'" do
+    get '/signup'
+    response.should have_selector('title', :content => "Inscription")
+  end
+
 end

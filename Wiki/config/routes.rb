@@ -1,5 +1,10 @@
 Wiki::Application.routes.draw do
 
+  get "users/new"
+
+  match '/signup',  :to => 'users#new'
+
+
 match '/home', :to => 'pages#home'
 
 match '/description', :to => 'pages#description'
