@@ -1,0 +1,11 @@
+<header>
+    <% logo = image_tag("Street_Fighter_IV_Logo.png", :alt => "Street Fighter 4", :class => "round") %>
+	<%= link_to logo, root_path %>
+    <nav class="round">
+      <ul>
+        <li><%= link_to "Home", home_path %></li>
+        <li><%= link_to "Description", description_path %></li>
+        <li><%= link_to "Stream", stream_path %></li>
+      </ul>
+    </nav>
+</header>
