@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title><%= title %></title>
+      <%= render 'layouts/stylesheets' %>
+	 <%= csrf_meta_tags %>
+</head>
+
+<body>
+<!-- Header apart of the main div on the left
+<div class="container">
+    <%= render 'layouts/header' %>
+
+  <section class="round">
+        <% flash.each do |key, value| %>
+          <div class="flash <%= key %>"><%= value %></div>
+        <% end %>
+        <%= yield %>
+  </section>
+
+  <!-- <%= render 'layouts/footer' %> -->
+
+
+</div>
+
+
+</body>
+
+</html>

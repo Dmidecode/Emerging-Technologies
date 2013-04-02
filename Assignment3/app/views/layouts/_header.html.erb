@@ -1,0 +1,33 @@
+<header>
+
+<script type="text/javascript" src="https://raw.github.com/snaptortoise/konami-js/master/konami.js"></script>
+<script type="text/javascript">
+
+	var konami = new Konami("<%= secret_url %> ");
+	
+</script>
+
+
+    <% logo = image_tag("logo_panier.png", :alt => "Panier Logo", :class => "round") %>
+	<%= link_to logo, root_path %>
+
+  
+
+    <nav class="round left">
+
+    <ul>
+      <li> <%= link_to "Add A New Product", add_path %></li>
+    </ul>
+    </nav>
+
+<!-- Remove Nav header to put it on the left of section tag -->
+    <nav class="round">
+
+    <ul>
+      <li> <%= link_to "List All Products", list_path %></li>
+
+
+      </ul>
+    </nav>
+
+</header>

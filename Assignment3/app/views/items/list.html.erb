@@ -1,0 +1,15 @@
+<h1>All The Products</h1>
+
+<ul>
+<% if @allItem.count == 0 %>
+	</br>
+	<p class="center"> Sorry, but you don't have any product ! </p>
+<% else %>
+<% @allItem.each do |a| %>
+	<li>
+		<%= link_to a.productName, a %>
+	</li>	
+<% end %>
+
+<% end %>
+</ul>

@@ -1,0 +1,12 @@
+<footer>
+  <nav class="round">
+    <ul>
+      <% nbPipe = @listFooter.size %>
+      <% @listFooter.each do |key, value| %>
+      <li><%= link_to key, value %> <% if nbPipe > 1 %> <%= "|" %> <% end %> </li>
+      <% nbPipe -= 1 %>
+      <% end %>
+
+    </ul>
+  </nav>
+</footer>
