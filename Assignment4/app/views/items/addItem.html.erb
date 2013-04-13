@@ -1,0 +1,23 @@
+<h1>Add A New Item</h1>
+	<%= form_for(@item) do |f| %>
+	<%= render 'shared/error_messages' %>
+	<div class="field">
+		<%= f.label "Product Name" %><br />
+		<%= f.text_field :productName %>
+	</div>
+	<div class="field">
+		<%= f.label "Price" %><br />
+		<%= f.text_field :price %>
+	</div>
+	<div class="field">
+		<%= f.label "Url Image" %><br />
+		<%= f.text_field :urlImage %>
+	</div>
+	<div class="field">
+		<%= f.label "Description" %><br />
+		<%= f.text_field :description %>
+	</div>
+	<div class="actions">
+		<%= f.submit "New Item" %>
+	</div>
+	<% end %>

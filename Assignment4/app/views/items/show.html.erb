@@ -1,0 +1,22 @@
+<table>
+<tr>
+	<td align="left">
+	<%= image_tag(@item.urlImage, :size => "300x300") %>
+	</td>
+<td style="text-align:right;vertical-align:top">
+ <strong> 
+ 	<font size="10pt">
+ 	<%= @item.productName %> 
+	 </font>
+</br>
+</br>
+</br>
+ 	<font size="6pt">
+		<%= @item.price %>
+	</font>
+ </strong>
+</td>
+</tr>
+</table>
+
+<p> <center> <%= @item.description %> </center> </p>

@@ -1,0 +1,18 @@
+<footer>
+  <nav class="round">
+    <ul>
+      <% nbPipe = @listFooter.size %>
+      <% @listFooter.each do |key, value| %>
+      <li><%= link_to key, value %> <% if nbPipe > 1 %> <%= "|" %> <% end %> </li>
+      <% nbPipe -= 1 %>
+      <% end %>
+
+<!--
+      <li><%= link_to "Sources", sources_path %></li>
+      <li><%= link_to "Contact", contact_path %></li>
+      <li><%= link_to "Capcom", 'http://www.capcom.com/' %></li>
+      <li><%= link_to "Hadouken !", 'http://en.wikipedia.org/wiki/Hadouken_(Street_Fighter)#Hadouken' %></li>
+  -->
+    </ul>
+  </nav>
+</footer>

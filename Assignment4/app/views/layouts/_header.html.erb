@@ -1,0 +1,33 @@
+<header>
+
+<script type="text/javascript" src="https://raw.github.com/snaptortoise/konami-js/master/konami.js"></script>
+<script type="text/javascript">
+
+	var konami = new Konami("<%= secret_url %> ");
+	
+</script>
+
+
+	<%= link_to logo, root_path %>
+ 
+
+<!-- Remove Nav header to put it on the left of section tag -->
+    <nav class="round">
+
+      <ul>
+      <% nbPipe = @listHeader.size %>
+      <% @listHeader.each do |key, value| %>
+      <li><%= link_to key, value %> <% if nbPipe >= 1 %> <%= "|" %> <% end %> </li>
+      <% nbPipe -= 1 %>
+      <% end %>
+
+      <% if signed_in? %>
+      <li><%= link_to "Disconnect", signout_path, :method => :delete %></li>
+      <% else %>
+      <li><%= link_to "Sign In", signin_path %></li>
+      <% end %>
+
+      </ul>
+    </nav>
+
+</header>
