@@ -4,7 +4,7 @@ class Micropost < ActiveRecord::Base
   post_regex = /\A[\w\d]+([,][\s]*[\w\d]+)*\z/i
 
   validates :title, :presence => true, :length => { :maximum => 75}
-  validates :content, :presence => true, :length => { :maximum => 150}
+  validates :content, :presence => true
   validates :tags, :format => { :with => post_regex }
 
 end

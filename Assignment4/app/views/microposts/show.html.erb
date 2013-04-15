@@ -1,7 +1,11 @@
+<% if @micro.length == 0 %>
+<h1><%= "No Posts" %></h1>
+<% end %>
+
 <% @micro.reverse.each do |m| %>
 	<table class="profile">
 		<tr>
-			<td><h1><%= m.title %></h1></td>
+			<td id="<%= m.title %>" ><h1><%= m.title %></h1></td>
 		</tr>
 		<tr>
 			<td><%= m.content %></td>

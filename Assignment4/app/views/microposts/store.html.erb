@@ -1,2 +1,8 @@
-<h1>Archive</h1>
-<p>Find me in app/views/microposts/store.html.erb</p>
+<h1> Archive Post </h1>
+<ul>
+<% @micro.reverse.each do |m| %>
+	<li>
+		<%= link_to m.title,  url_for(:action => 'show', :anchor => m.title) %>
+	</li>
+<% end %>
+</ul>
