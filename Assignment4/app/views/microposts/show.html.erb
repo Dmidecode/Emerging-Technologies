@@ -1,0 +1,15 @@
+<% @micro.reverse.each do |m| %>
+	<table class="profile">
+		<tr>
+			<td><h1><%= m.title %></h1></td>
+		</tr>
+		<tr>
+			<td><%= m.content %></td>
+		</tr>
+		<tr>
+			<td><U>Tags</U> --> <%= m.tags %></td>		
+		</tr>
+	</table>
+</br> </br>
+<% end %>
+

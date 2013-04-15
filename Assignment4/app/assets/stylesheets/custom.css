@@ -216,8 +216,8 @@ td.sidebar {
   width: 30%;
   padding: 1em;
   vertical-align: top;
-  background: #ffc;
-}
+/*  background: #ffc;
+*/}
 
 .profile img.gravatar {
   border: 1px solid #999;

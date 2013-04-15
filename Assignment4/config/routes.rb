@@ -2,6 +2,7 @@ Wiki::Application.routes.draw do
 
 resources :users
 resources :sessions, :only => [:new, :create, :destroy]
+resources :microposts
 
 match '/secret', :to => 'pages#secret'
 
@@ -30,7 +31,15 @@ match '/signin',  :to => 'sessions#new'
 
 match '/signout', :to => 'sessions#destroy'
 
-root :to => 'pages#home'
+match '/addPost', :to => 'microposts#new'
+
+match '/showPost', :to => 'microposts#show'
+
+match '/archive', :to => 'microposts#store'
+
+root :to => 'microposts#show'
+
+# root :to => 'pages#home'
 # root :to => 'pages#home'
   # The priority is based upon order of creation:
   # first created -> highest priority.

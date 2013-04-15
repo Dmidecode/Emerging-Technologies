@@ -3,7 +3,7 @@ require 'spec_helper'
 describe "LayoutLinks" do
 	it "Home at '/'" do
     get '/'
-    response.should have_selector('title', :content => "MyLittleWiki | Home")
+    response.should have_selector('title', :content => "MyLittleWiki | All microposts")
   end
 
   it "Description at '/description'" do
@@ -39,26 +39,5 @@ describe "when not sign in" do
     end
   end
 
-  describe "when sign in" do
-
-    before(:each) do
-      @user = Factory(:user)
-      visit signin_path
-      fill_in :email,    :with => @user.email
-      fill_in "Password", :with => @user.password
-      click_button
-    end
-
-    it "must have a link to disconnect" do
-      visit root_path
-      response.should have_selector("a", :href => signout_path,
-                                         :content => "Disconnect")
-    end
-
-    it "must have a link to the profil" 
-    visit root_path
-    response.should have_selector("a", :href => user_path(@user),
-                                         :content => "Profile")
-  end
 
 end

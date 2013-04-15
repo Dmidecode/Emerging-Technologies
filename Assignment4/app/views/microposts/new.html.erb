@@ -1,0 +1,19 @@
+<h1>Add a micropost</h1>
+	<%= form_for(@micro) do |f| %>
+	<%= render 'shared/error_messages_post' %>
+	<div class="field">
+		<%= f.label :title %><br />
+		<%= f.text_field :title %>
+	</div>
+	<div class="field">
+		<%= f.label :content %><br />
+		<%= f.text_field :content %>
+	</div>
+	<div class="field">
+		<%= f.label :tags %><br />
+		<%= f.text_field :tags %>
+	</div>
+	<div class="actions">
+		<%= f.submit "Add a micropost" %>
+	</div>
+	<% end %>
